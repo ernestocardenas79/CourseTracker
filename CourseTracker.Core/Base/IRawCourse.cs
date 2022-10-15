@@ -1,8 +1,7 @@
 namespace CourseTracker.Core.Base;
-public interface IRawCourse
+public abstract class IRawLineCourse
 {
-    internal string Module { get; set; }
-    internal string Duration {get; set;}
-    internal string lesson {get;set;}
-    internal string lessonDuration {get; set;}
+    public string Module { get; set; }
+    public string lesson { get; set; }
+    public string lessonDuration { get; set; }
 }
