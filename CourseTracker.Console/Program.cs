@@ -8,8 +8,10 @@ var config = new ConfigurationBuilder()
                     .Build();
 
 string filesPath = config["RawCoursePath"].ToString();
+string processedPath = config["ProcessedCoursePath"].ToString();
+string pristinePath = config["PristineCoursePath"].ToString();
 
-PrepareCourseConfiguration configuration = new();
+PrepareCourseConfiguration configuration = new(filesPath, processedPath, pristinePath);
 
-CourseBuilder courseBuilder = new(filesPath, configuration);
+CourseBuilder courseBuilder = new(configuration);
 courseBuilder.CreateNewCourses();

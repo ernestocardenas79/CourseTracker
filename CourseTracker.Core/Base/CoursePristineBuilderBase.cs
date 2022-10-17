@@ -16,14 +16,15 @@ public abstract class CoursePristineBuilderBase
             var lines = linesFromFile(file);
             var coursePristine = plartformCourseBuilder.Build(lines);
 
+            coursePristine.Name = nameFile(file).Replace(coursePristine.Platform + "_", "");
+
             PresistCourse(coursePristine);
         }
     }
 
-    //TODO try this with implementation - should work?
-    //public void CreateNewCourses();
-
     protected abstract void PresistCourse(ICoursePristine pristineCourse);
 
     protected abstract string[] linesFromFile(string file);
+
+    protected abstract string nameFile(string file);
 }

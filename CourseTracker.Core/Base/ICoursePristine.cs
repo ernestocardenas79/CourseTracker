@@ -1,7 +1,8 @@
 namespace CourseTracker.Core.Base;
 public interface ICoursePristine
 {
-    internal string Name { get; set; }
-    internal string Instructor { get; set; }
-    internal IList<IModules> Modules { get; set; }
+    string Platform { get; set; }
+    string Name { get; set; }
+    string Instructor { get; set; }
+    IEnumerable<IModule> Modules { get; set; }
 }

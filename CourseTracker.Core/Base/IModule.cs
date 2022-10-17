@@ -1,8 +1,8 @@
 namespace CourseTracker.Core.Base;
-public interface ILesson
+
+public interface IModule
 {
     public string Id { get; init; }
     public string Name { get; set; }
-    public string Duration { get; set; }
-    public bool Taked { get; set; }
+    public IEnumerable<ILesson> Lessons { get; set; }
 }

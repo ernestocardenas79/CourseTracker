@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace CourseTracker.Core.Base;
+﻿namespace CourseTracker.Core.Base;
 
 public interface IPlartformCourseBuilder
 {

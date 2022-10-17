@@ -1,7 +1,5 @@
 ﻿using CourseTracker.Core.Base;
 using CourseTracker.PrepareCourse.Configuration;
-using CourseTracker.PrepareCourse.Helper;
-using CourseTracker.PrepareCourse.Udemy;
 
 namespace CourseTracker.PrepareCourse.Scanner;
 
@@ -12,7 +10,7 @@ public class CoursePlatformScanner
 
     private ScanStatus Status { get; set; }
 
-    public CoursePlatformScanner(string filesPath, PrepareCourseConfiguration configuration) 
+    public CoursePlatformScanner(string filesPath, PrepareCourseConfiguration configuration)
     {
         Status = ScanStatus.inactive;
         this.filesPath = filesPath;
